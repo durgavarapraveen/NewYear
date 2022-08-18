@@ -1,10 +1,9 @@
 import React from "react";
 import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
 
-const App = () => {
+const Starry = ({particlesInit, particlesLoaded}) => {
   return (
-    <div className="App">
+    <div className="Starry">
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -62,4 +61,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Starry;
