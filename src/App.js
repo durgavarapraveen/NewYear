@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { loadFull } from "tsparticles";
 import Bubbles from "./Bubbles";
 import Starry from "./Starry";
@@ -6,9 +6,13 @@ import Wheel from "./Wheel";
 import Fireworks from "./Fireworks";
 import Example from "./Example";
 import Snow from "./Snow";
+import NewYear from "./Components/NewYear";
 
 
 const App = () => {
+
+  const [firework, setFireWork] = useState(false)
+
   const particlesInit = async (main) => {
     console.log(main);
 
@@ -21,12 +25,26 @@ const App = () => {
   const particlesLoaded = (container) => {
     console.log(container);
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setFireWork(true);
+    }, 14500)
+  })
+
   return (
     <div className="App">
-      <Fireworks
-        particlesLoaded={particlesLoaded}
+      <NewYear />
+      {
+        firework && <Fireworks
+          particlesLoaded={particlesLoaded}
+          particlesInit={particlesInit}
+        />
+      }
+      {/* <Starry
         particlesInit={particlesInit}
-      />
+        particlesLoaded={particlesLoaded}
+      /> */}
     </div>
   );
 };
