@@ -16,17 +16,19 @@
     position: relative;
 
 }
-.text, .text_4 {
+
+.text,
+.text_4 {
     color: yellow;
     font-family: 'Anton', sans-serif;
-    font-size: 150px;
-    
+    font-size: 100px;
+
 }
 
 .Image {
     position: absolute;
-    top: -145px;
-    left: -48px;
+    top: -160px;
+    left: -70px;
     height: 200px;
     width: 200px;
 }
@@ -36,7 +38,7 @@
     border-bottom: 100px;
     border-color: yellow;
     height: 5px;
-    width: 150px;
+    width: 40%;
     background-color: yellow;
     left: 70%;
     top: 20%;
@@ -59,19 +61,60 @@
     margin: 0px 10px;
 }
 
-.bg_image, .bg_image1, .bg_image2 {
+.bg_image,
+.bg_image1,
+.bg_image2 {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100vw;
     /* height: 50vh; */
 }
+
 .bg_image {
     z-index: 3;
 }
+
 .bg_image1 {
     z-index: 1;
 }
+
 .bg_image2 {
     z-index: 2;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+@media screen and (max-width: 960px) {
+    .newYearText {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .text,
+    .text_4 {
+        font-size: 100px;
+    }
+
+    .newYearText {
+        font-size: 60px;
+    }
+
+    .GIF {
+        width: 100px;
+    }
+
+    .Image {
+        position: absolute;
+        top: -160px;
+        left: -70px;
+        height: 200px;
+        width: 200px;
+    }
 }

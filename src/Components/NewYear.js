@@ -22,7 +22,7 @@ function NewYear() {
 
     const BallonVariants = {
         initial: { x: 0 },
-        visible: { x: -150, transition: { duration: 2 } },
+        visible: { x: -100, transition: { duration: 2 } },
         moveup: { y: -1000, transition: { duration: 5 } }
     }
 
@@ -66,7 +66,7 @@ function NewYear() {
             <img src='https://jackrugile.com/lab/fireworks-v2/images/mountains2.png' alt='Img' className='bg_image2' />
             <motion.div className='main-container'
                 initial={{ y: 0, x: 0 }}
-                animate={{ y: -80, x: 50 }}
+                animate={{ y: -80, x: 0 }}
                 transition={{ delay: 13.5, duration: 1 }}
             >
                 <p className='text'>2</p>
@@ -95,7 +95,7 @@ function NewYear() {
                     transition={{ duration: 5 }}
 
                 >
-                    <motion.p initial={{ x: 0 }} animate={{ x: -120 }} transition={{ duration: 5, delay: 8.5 }} className='text_4'>4</motion.p>
+                    <motion.p initial={{ x: 0 }} animate={{ x: '-200%' }} transition={{ duration: 5, delay: 8.5 }} className='text_4'>4</motion.p>
                     <motion.img src={ballon} alt='ballon' className='Image'
                         variants={BallonVariants}
                         initial="initial"
@@ -103,12 +103,14 @@ function NewYear() {
                     />
                 </motion.div>
             </motion.div>
-            <motion.p
+            <motion.div
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1, delay: 14.5 }}
-                className='newYearText'>Happy New Year <img src='https://c.tenor.com/h_S3tK6B-h4AAAAC/tenor.gif' alt='GIF' className='GIF' />
-            </motion.p>
+                className='newYearText'>
+                    <p className='flex justify-center text-center'>Happy New Year</p>
+                    <img src='https://c.tenor.com/h_S3tK6B-h4AAAAC/tenor.gif' alt='GIF' className='GIF' />
+            </motion.div>
 
         </div>
 
